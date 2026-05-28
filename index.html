@@ -64,7 +64,7 @@
       display: flex;
       align-items: center;
       gap: 9px;
-      font-size: clamp(12px, 1.15vw, 18px);
+      font-size: 12px;
       letter-spacing: 0.04em;
       color: var(--text);
       transition: color 0.35s ease;
@@ -91,10 +91,10 @@
     }
 
     .toggle-track {
-      width: 52px;
-      height: 28px;
-      border-radius: 9999px;
-      background: var(--track);
+      width: 48px;
+      height: 25px;
+      border-radius: 5px;
+      background: transparent;
       position: relative;
       transition: background 0.35s ease;
     }
@@ -122,7 +122,7 @@
     }
 
     .nav-right a {
-      font-size: clamp(12px, 1.15vw, 18px);
+      font-size: 12px;
       color: var(--text);
       text-decoration: none;
       letter-spacing: 0.01em;
@@ -155,9 +155,9 @@
     .hero h1 {
       font-family: 'Work Sans', sans-serif;
       font-weight: 400;
-      font-size: clamp(26px, 3.8vw, 56px);
-      line-height: 1.19;
-      letter-spacing: -0.04em;
+      font-size: 42px;
+      line-height: 50px;
+      letter-spacing: -2px;
       color: var(--text);
       max-width: 74vw;
       margin-bottom: 3vw;
@@ -167,13 +167,16 @@
     .btn-read {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       align-self: flex-start;
-      padding: 11px 26px;
-      border-radius: 100px;
+      width: 105px;
+      height: 33px;
+      padding: 0;
+      border-radius: 40px;
       border: none;
       font-family: 'Work Sans', sans-serif;
       font-weight: 400;
-      font-size: clamp(11px, 1vw, 15px);
+      font-size: 12px;
       color: var(--bg);
       text-decoration: none;
       background: var(--text);
@@ -194,7 +197,7 @@
     .video-wrap {
       position: sticky;
       top: 0;
-      height: 100vh;
+      height: 575px;
       overflow: hidden;
       z-index: 1;
     }
@@ -242,13 +245,6 @@
     /* ── TAGLINE SECTION ── */
     .tagline-section {
       display: none; /* desktop: hidden, only shown on mobile */
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      display: none; /* desktop: hidden — only shown on mobile */
-      background: var(--bg);
-      transition: background 0.35s ease;
     }
 
     /* ── MOBILE FOOTER BRAND ── */
@@ -337,21 +333,6 @@
         transition: color 0.35s ease;
       }
 
-      /* ── FOOTER (mobile) ── */
-      footer {
-        display: block;
-        padding: 0 6.25vw 0;
-      }
-
-      .footer-copyright {
-        display: block;
-        font-size: clamp(12px, 3.75vw, 14px);
-        color: var(--text);
-        letter-spacing: 0.01em;
-        margin-bottom: 5vw;
-        transition: color 0.35s ease;
-      }
-
       /* ── LARGE BRAND ── */
       .footer-brand-large {
         display: block;
@@ -422,11 +403,6 @@
   <section class="tagline-section">
     <p class="tagline-text">Remote by default,<br>available globally.</p>
   </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <span class="footer-copyright">&copy; ADMF</span>
-  </footer>
 
   <!-- LARGE BRAND (mobile only) -->
   <div class="footer-brand-large">ADMF</div>
