@@ -91,9 +91,9 @@
     }
 
     .toggle-track {
-      width: 44px;
-      height: 24px;
-      border-radius: 12px;
+      width: 52px;
+      height: 28px;
+      border-radius: 9999px;
       background: var(--track);
       position: relative;
       transition: background 0.35s ease;
@@ -103,9 +103,9 @@
       position: absolute;
       top: 50%;
       left: 3px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      border-radius: 9999px;
       background: var(--knob);
       transform: translateY(-50%);
       transition: transform 0.35s ease, background 0.35s ease;
@@ -192,6 +192,7 @@
       top: 0;
       height: 100vh;
       overflow: hidden;
+      z-index: 1;
     }
 
     video {
@@ -234,30 +235,21 @@
       text-transform: uppercase;
     }
 
+    /* ── TAGLINE SECTION ── */
+    .tagline-section {
+      display: none; /* desktop: hidden, only shown on mobile */
+    }
+
     /* ── FOOTER ── */
     footer {
+      display: none; /* desktop: hidden — only shown on mobile */
       background: var(--bg);
-      padding: 3.5vw 5vw;
-      display: flex;
-      gap: clamp(16px, 2.5vw, 40px);
       transition: background 0.35s ease;
     }
 
-    footer a {
-      font-size: clamp(11px, 1vw, 16px);
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      transition: color 0.35s ease, opacity 0.2s ease;
-    }
-
-    @media (hover: hover) {
-      footer a:hover {
-        text-decoration: underline;
-        text-decoration-color: currentColor;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 4px;
-      }
+    /* ── MOBILE FOOTER BRAND ── */
+    .footer-brand-large {
+      display: none; /* desktop: hidden */
     }
 
     /* ── MOBILE ── */
@@ -267,26 +259,105 @@
         padding: 5.5vw 6.25vw;
       }
 
+      /* ── TOGGLE: slightly smaller on mobile ── */
+      .toggle-track {
+        width: 38px;
+        height: 20px;
+        border-radius: 9999px;
+      }
+
+      .toggle-knob {
+        width: 14px;
+        height: 14px;
+        border-radius: 9999px;
+      }
+
+      [data-theme="dark"] .toggle-knob {
+        transform: translateY(-50%) translateX(18px);
+      }
+
       .hero {
-        padding: 18vh 6.25vw 8vh;
+        padding: 13vh 6.25vw 8vh;
       }
 
       .hero h1 {
-        font-size: clamp(22px, 7vw, 36px);
+        font-size: clamp(24px, 7.5vw, 36px);
         max-width: 100%;
         margin-bottom: 12vw;
+      }
+
+      /* ── VIDEO: disable sticky on mobile ── */
+      .video-outer {
+        height: auto;
+      }
+
+      .video-wrap {
+        position: relative;
+        top: auto;
+        height: auto;
+        overflow: visible;
+      }
+
+      video {
+        position: static;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        object-fit: initial;
+      }
+
+      .video-overlay {
+        display: none;
       }
 
       .video-desktop { display: none; }
       .video-mobile  { display: block; }
 
-      .overlay-tag  { font-size: 8px; letter-spacing: 0.18em; }
-      .overlay-poem { font-size: 7px; line-height: 1.85; }
+      /* ── TAGLINE ── */
+      .tagline-section {
+        display: block;
+        padding: 8vw 6.25vw 5vw;
+        background: var(--bg);
+        transition: background 0.35s ease;
+      }
 
+      .tagline-text {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 400;
+        font-size: clamp(24px, 7.5vw, 36px);
+        line-height: 1.19;
+        letter-spacing: -0.04em;
+        color: var(--text);
+        transition: color 0.35s ease;
+      }
+
+      /* ── FOOTER (mobile) ── */
       footer {
-        padding: 8vw 6.25vw;
-        flex-wrap: wrap;
-        gap: 14px;
+        display: block;
+        padding: 0 6.25vw 0;
+      }
+
+      .footer-copyright {
+        display: block;
+        font-size: clamp(12px, 3.75vw, 14px);
+        color: var(--text);
+        letter-spacing: 0.01em;
+        margin-bottom: 5vw;
+        transition: color 0.35s ease;
+      }
+
+      /* ── LARGE BRAND ── */
+      .footer-brand-large {
+        display: block;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 400;
+        font-size: clamp(96px, 30vw, 130px);
+        line-height: 0.88;
+        letter-spacing: -0.04em;
+        color: var(--text);
+        padding: 0 6.25vw 10vw;
+        background: var(--bg);
+        transition: color 0.35s ease, background 0.35s ease;
       }
     }
   </style>
@@ -341,13 +412,18 @@
     </div>
   </div>
 
+  <!-- TAGLINE (mobile only) -->
+  <section class="tagline-section">
+    <p class="tagline-text">Remote by default,<br>available globally.</p>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="#" target="_blank" rel="noopener">Instagram</a>
-    <a href="#" target="_blank" rel="noopener">Twitter</a>
-    <a href="#" target="_blank" rel="noopener">Discord</a>
+    <span class="footer-copyright">&copy; ADMF</span>
   </footer>
+
+  <!-- LARGE BRAND (mobile only) -->
+  <div class="footer-brand-large">ADMF</div>
 
   <script>
     const toggle = document.getElementById('themeToggle');
