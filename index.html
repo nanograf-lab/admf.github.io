@@ -140,6 +140,10 @@
 
     /* ── HERO ── */
     .hero {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      z-index: 0;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -277,6 +281,8 @@
       }
 
       .hero {
+        position: static;
+        height: auto;
         padding: 13vh 6.25vw 8vh;
       }
 
