@@ -259,6 +259,10 @@
     }
 
     /* ── MOBILE FOOTER BRAND ── */
+    .footer-brand-wrap {
+      display: none; /* desktop: hidden */
+    }
+
     .footer-brand-large {
       display: none; /* desktop: hidden */
     }
@@ -356,7 +360,7 @@
       /* ── TAGLINE ── */
       .tagline-section {
         display: block;
-        margin-top: 16px;
+        margin-top: 30px;
         padding: 0 20px 0;
         background: var(--bg);
         transition: background 0.35s ease;
@@ -384,7 +388,8 @@
         font-size: clamp(12px, 3.75vw, 14px);
         color: var(--text);
         letter-spacing: 0.01em;
-        margin-bottom: 0;
+        margin-top: 40px;
+        margin-bottom: 10px;
         transition: color 0.35s ease;
       }
 
@@ -398,6 +403,11 @@
       }
 
       /* ── LARGE BRAND ── */
+      .footer-brand-wrap {
+        display: block;
+        overflow: hidden;
+      }
+
       .footer-brand-large {
         display: block;
         font-family: 'Inter', sans-serif;
@@ -408,7 +418,7 @@
         text-align: left;
         white-space: nowrap;
         color: var(--text);
-        margin-top: 12px;
+        margin-top: 53px;
         margin-bottom: -40px;
         padding-left: 20px;
         background: var(--bg);
@@ -482,7 +492,9 @@
   <hr class="footer-divider">
 
   <!-- LARGE BRAND (mobile only) -->
-  <div class="footer-brand-large">ADMF</div>
+  <div class="footer-brand-wrap">
+    <div class="footer-brand-large">ADMF</div>
+  </div>
 
   <script>
     const toggle = document.getElementById('themeToggle');
