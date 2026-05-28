@@ -142,12 +142,13 @@
     .hero {
       position: sticky;
       top: 0;
-      height: 100vh;
+      height: auto;
+      min-height: 55vh;
       z-index: 0;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 28vh 5vw 11vh;
+      padding: 28vh 5vw 0;
       background: var(--bg);
       transition: background 0.35s ease;
     }
@@ -188,13 +189,15 @@
     /* ── VIDEO ── */
     .video-outer {
       position: relative;
-      height: 200vh;
+      margin-top: 0;
+      width: 100vw;
+      height: 56.25vw;
     }
 
     .video-wrap {
       position: sticky;
       top: 0;
-      height: 100vh;
+      height: 56.25vw;
       overflow: hidden;
       z-index: 1;
     }
