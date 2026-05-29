@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADMF — Visual Design with Intelligence</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&family=Inter:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&family=Inter:wght@550&display=swap');
 
     *, *::before, *::after {
       box-sizing: border-box;
@@ -19,21 +19,19 @@
 
     /* ── THEME ── */
     :root {
-      --bg:          #fff;
-      --text:        #000;
-      --text-muted:  rgba(0,0,0,0.55);
-      --border:      rgba(0,0,0,0.45);
-      --knob:        #ffffff;
-      --track:       #DDDDDD;
+      --bg:     #fff;
+      --text:   #000;
+      --border: rgba(0,0,0,0.45);
+      --knob:   #ffffff;
+      --track:  #DDDDDD;
     }
 
     [data-theme="dark"] {
-      --bg:          #000;
-      --text:        #fff;
-      --text-muted:  rgba(255,255,255,0.55);
-      --border:      rgba(255,255,255,0.45);
-      --knob:        #444444;
-      --track:       #222222;
+      --bg:     #000;
+      --text:   #fff;
+      --border: rgba(255,255,255,0.45);
+      --knob:   #444444;
+      --track:  #222222;
     }
 
     body {
@@ -136,13 +134,11 @@
     .hero {
       position: sticky;
       top: 0;
-      height: auto;
       min-height: 620px;
       z-index: 0;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 0;
       background: var(--bg);
       transition: background 0.35s ease;
     }
@@ -156,14 +152,11 @@
     }
 
     .hero h1 {
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 400;
       font-size: clamp(28px, 3.8vw, 60px);
       line-height: 1.19;
       letter-spacing: -0.04em;
       color: var(--text);
       max-width: 74vw;
-      margin-bottom: 0;
       transition: color 0.35s ease;
     }
 
@@ -174,15 +167,12 @@
       padding: 12px 30px;
       border-radius: 40px;
       border: none;
-      font-family: 'Work Sans', sans-serif;
-      font-weight: 400;
       font-size: 15px;
       color: var(--bg);
       text-decoration: none;
       background: var(--text);
       letter-spacing: 0.01em;
       margin-top: 38px;
-      margin-bottom: 0;
       transition: color 0.35s ease, background 0.35s ease, opacity 0.2s ease;
     }
 
@@ -193,7 +183,6 @@
     /* ── VIDEO ── */
     .video-outer {
       position: relative;
-      margin-top: 0;
       width: 100vw;
       height: 56.25vw;
     }
@@ -217,30 +206,12 @@
 
     .video-mobile { display: none; }
 
-    /* ── TAGLINE SECTION ── */
-    .tagline-section {
-      display: none; /* desktop: hidden, only shown on mobile */
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      display: none; /* desktop: hidden — only shown on mobile */
-      background: var(--bg);
-      transition: background 0.35s ease;
-    }
-
-    /* ── MOBILE FOOTER BRAND ── */
-    .footer-brand-wrap {
-      display: none; /* desktop: hidden */
-    }
-
+    /* ── MOBILE-ONLY ELEMENTS (hidden on desktop) ── */
+    .tagline-section,
+    .footer-divider,
+    .footer-brand-wrap,
     .footer-brand-large {
-      display: none; /* desktop: hidden */
-    }
-
-    /* ── FOOTER DIVIDER ── */
-    .footer-divider {
-      display: none; /* desktop: hidden */
+      display: none;
     }
 
     /* ── MOBILE ── */
@@ -259,13 +230,11 @@
       .toggle-track {
         width: 38px;
         height: 20px;
-        border-radius: 9999px;
       }
 
       .toggle-knob {
         width: 14px;
         height: 14px;
-        border-radius: 9999px;
       }
 
       [data-theme="dark"] .toggle-knob {
@@ -274,9 +243,8 @@
 
       .hero {
         position: static;
-        height: auto;
         min-height: auto;
-        padding: 0 0 8vh;
+        padding-bottom: 8vh;
       }
 
       .hero-content {
@@ -289,7 +257,6 @@
         font-size: 7.5vw;
         line-height: 1.2;
         max-width: 100%;
-        margin-bottom: 0;
       }
 
       .btn-read {
@@ -308,14 +275,12 @@
 
       .video-wrap {
         position: relative;
-        top: auto;
         height: auto;
         overflow: visible;
       }
 
       video {
         position: static;
-        inset: auto;
         width: 100%;
         height: auto;
         object-fit: initial;
@@ -328,14 +293,12 @@
       .tagline-section {
         display: block;
         margin-top: 30px;
-        padding: 0 20px 0;
+        padding: 0 20px;
         background: var(--bg);
         transition: background 0.35s ease;
       }
 
       .tagline-text {
-        font-family: 'Work Sans', sans-serif;
-        font-weight: 400;
         font-size: clamp(12px, 3.75vw, 14px);
         line-height: 1.4;
         letter-spacing: 0.01em;
@@ -343,23 +306,7 @@
         transition: color 0.35s ease;
       }
 
-      /* ── FOOTER (mobile) ── */
-      footer {
-        display: block;
-        margin-top: 8px;
-        padding: 0 20px 0;
-      }
-
-      .footer-copyright {
-        display: block;
-        font-size: clamp(12px, 3.75vw, 14px);
-        color: var(--text);
-        letter-spacing: 0.01em;
-        margin-top: 40px;
-        margin-bottom: 10px;
-        transition: color 0.35s ease;
-      }
-
+      /* ── FOOTER ── */
       .footer-divider {
         display: block;
         border: none;
@@ -418,7 +365,7 @@
   <section class="hero">
     <div class="hero-content">
       <h1>A creative partner supporting businesses with clear design direction, visual craft, and the smart use of AI.</h1>
-      <a href="admf.work_credentials.pdf" target="_blank" class="btn-read">Read more</a>
+      <a href="admf.work_credentials.pdf" target="_blank" rel="noopener" class="btn-read">Read more</a>
     </div>
   </section>
 
@@ -438,10 +385,6 @@
   <section class="tagline-section">
     <p class="tagline-text">Remote by default,<br>available globally.</p>
   </section>
-
-  <!-- FOOTER -->
-  <footer>
-  </footer>
 
   <hr class="footer-divider">
 
