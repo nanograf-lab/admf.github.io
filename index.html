@@ -217,35 +217,6 @@
 
     .video-mobile { display: none; }
 
-    .video-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 7% 0 10%;
-      pointer-events: none;
-    }
-
-    .overlay-tag {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: clamp(8px, 0.72vw, 12px);
-      letter-spacing: 0.22em;
-      color: rgba(255,255,255,0.75);
-      text-transform: uppercase;
-    }
-
-    .overlay-poem {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: clamp(8px, 0.8vw, 13px);
-      line-height: 2;
-      letter-spacing: 0.14em;
-      color: rgba(255,255,255,0.7);
-      text-align: center;
-      text-transform: uppercase;
-    }
-
     /* ── TAGLINE SECTION ── */
     .tagline-section {
       display: none; /* desktop: hidden, only shown on mobile */
@@ -348,10 +319,6 @@
         width: 100%;
         height: auto;
         object-fit: initial;
-      }
-
-      .video-overlay {
-        display: none;
       }
 
       .video-desktop { display: none; }
@@ -464,18 +431,6 @@
       <video class="video-mobile" autoplay muted loop playsinline>
         <source src="Video/ad_m.mp4" type="video/mp4">
       </video>
-      <div class="video-overlay">
-        <div class="overlay-tag">LUMA Intelligence</div>
-        <div class="overlay-poem">
-          AURA IS NOT JUST A SYSTEM. IT'S A PRESENCE.<br>
-          IT LISTENS WITHOUT NOISE.<br>
-          FEELS WITHOUT ASKING.<br>
-          AND LEARNS IN SILENCE.<br>
-          <br>
-          YOU DON'T NEED TO EXPLAIN.<br>
-          JUST BE.
-        </div>
-      </div>
     </div>
   </div>
 
