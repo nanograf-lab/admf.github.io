@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADMF | Senior Design Partner</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&family=Inter:wght@550&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
     *, *::before, *::after {
       box-sizing: border-box;
@@ -209,69 +209,85 @@
 
     /* ── MOBILE-ONLY ELEMENTS (hidden on desktop) ── */
     .tagline-section,
+    footer,
     .footer-divider,
     .footer-brand-wrap,
     .footer-brand-large {
       display: none;
     }
 
+    footer {
+      background: var(--bg);
+      transition: background 0.35s ease;
+    }
+
     /* ── MOBILE ── */
     @media (max-width: 768px) {
 
       nav {
-        padding: 5.5vw 6.25vw;
+        padding: 3.91vw 5.7vw;
+      }
+
+      .nav-brand {
+        font-size: clamp(14px, 4.23vw, 26px);
       }
 
       .nav-brand-square {
-        width: 0.85em;
-        height: 0.85em;
+        width: 0.75em;
+        height: 0.75em;
       }
 
-      /* ── TOGGLE: slightly smaller on mobile ── */
+      .nav-right a {
+        font-size: clamp(14px, 4.23vw, 26px);
+      }
+
+      /* ── TOGGLE: scaled for mobile ── */
       .toggle-track {
-        width: 38px;
-        height: 20px;
+        width: 10.42vw;
+        height: 6.25vw;
       }
 
       .toggle-knob {
-        width: 14px;
-        height: 14px;
+        left: 0.78vw;
+        width: 4.69vw;
+        height: 4.69vw;
       }
 
       [data-theme="dark"] .toggle-knob {
-        transform: translateY(-50%) translateX(18px);
+        transform: translateY(-50%) translateX(4.17vw);
       }
 
       .hero {
         position: static;
         min-height: auto;
-        padding-bottom: 8vh;
+        padding-bottom: 0;
       }
 
       .hero-content {
-        padding-top: 47px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 37.2vw;
+        padding-left: 5.7vw;
+        padding-right: 5.7vw;
       }
 
       .hero h1 {
-        font-size: 7.5vw;
-        line-height: 1.2;
+        font-size: 7.49vw;
+        line-height: 1.3;
         max-width: 100%;
+        letter-spacing: -0.01em;
       }
 
       .btn-read {
-        margin-top: 32px;
-        padding: 10px 20px;
-        font-size: 12px;
-        background: #000;
-        color: #fff;
+        margin-top: 10.1vw;
+        padding: 2.56vw 6.4vw;
+        font-size: 3.2vw;
+        background: var(--text);
+        color: var(--bg);
       }
 
       /* ── VIDEO: disable sticky on mobile ── */
       .video-outer {
         height: auto;
-        margin-top: 40px;
+        margin-top: 13.2vw;
       }
 
       .video-wrap {
@@ -293,28 +309,44 @@
       /* ── TAGLINE ── */
       .tagline-section {
         display: block;
-        margin-top: 30px;
-        padding: 0 20px;
+        margin-top: 12.9vw;
+        padding: 0 5.7vw;
         background: var(--bg);
         transition: background 0.35s ease;
       }
 
       .tagline-text {
-        font-size: clamp(12px, 3.75vw, 14px);
+        font-size: 4.23vw;
         line-height: 1.4;
-        letter-spacing: 0.01em;
+        letter-spacing: -0.01em;
         color: var(--text);
         transition: color 0.35s ease;
       }
 
-      /* ── FOOTER ── */
+      /* ── FOOTER (mobile) ── */
+      footer {
+        display: block;
+        padding: 0 5.7vw;
+      }
+
+      .footer-copyright {
+        display: block;
+        font-size: 4.23vw;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: var(--text);
+        margin-top: 14vw;
+        margin-bottom: 0;
+        transition: color 0.35s ease;
+      }
+
       .footer-divider {
         display: block;
         border: none;
         border-top: 1px solid var(--border);
-        margin-top: 8px;
-        width: calc(100% - 40px);
-        margin-left: 20px;
+        margin-top: 2.77vw;
+        width: calc(100% - 11.4vw);
+        margin-left: 5.7vw;
       }
 
       /* ── LARGE BRAND ── */
@@ -325,17 +357,17 @@
 
       .footer-brand-large {
         display: block;
-        font-family: 'Inter', sans-serif;
-        font-weight: 550;
-        font-size: 31vw;
-        line-height: 1;
-        letter-spacing: -0.04em;
-        text-align: left;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 600;
+        font-size: 31.36vw;
+        line-height: 1.09;
+        letter-spacing: -0.01em;
+        text-align: center;
         white-space: nowrap;
         color: var(--text);
-        margin-top: 53px;
+        margin-top: 5.38vw;
         margin-bottom: -40px;
-        padding-left: 20px;
+        padding: 0;
         background: var(--bg);
         transition: color 0.35s ease, background 0.35s ease;
       }
@@ -386,6 +418,11 @@
   <section class="tagline-section">
     <p class="tagline-text">Remote by default,<br>available globally.</p>
   </section>
+
+  <!-- FOOTER (mobile only) -->
+  <footer>
+    <span class="footer-copyright">Copyright &copy; 2026 ADMF</span>
+  </footer>
 
   <hr class="footer-divider">
 
