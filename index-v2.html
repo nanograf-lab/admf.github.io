@@ -181,6 +181,12 @@
       .btn-read:hover { opacity: 0.6; }
     }
 
+    .desktop-break { display: block; }
+
+    @media (max-width: 768px) {
+      .desktop-break { display: none; }
+    }
+
     /* ── VIDEO ── */
     .video-outer {
       position: relative;
@@ -397,7 +403,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>A senior multidisciplinary design partner. Visual craft and product thinking, without the overhead of a traditional agency.</h1>
+      <h1>A senior multidisciplinary design partner.<br class="desktop-break"> Visual craft and product thinking, without the overhead of a traditional agency.</h1>
       <a href="admf.work_credentials.pdf" target="_blank" rel="noopener" class="btn-read">See how we work</a>
     </div>
   </section>
