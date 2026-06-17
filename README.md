@@ -8,7 +8,7 @@ Senior design partnership. Static site on GitHub Pages.
 ## Live Site
 
 **URL:** https://admf.work
-**Repo:** github.com/nanograf-lab/admf.git
+**Repo:** github.com/nanograf-lab/admf.github.io.git
 **Branch:** main
 **Platform:** GitHub Pages
 

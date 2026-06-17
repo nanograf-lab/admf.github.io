@@ -204,7 +204,7 @@ These are separate. Do not conflate them in any communication or document.
 
 **Domain:** admf.work
 **Platform:** GitHub Pages (static HTML)
-**Repo:** github.com/nanograf-lab/admf.git
+**Repo:** github.com/nanograf-lab/admf.github.io.git
 **Branch:** main
 **Local path:** /Users/andreasmaier/Documents/ADMF/ADMF Site/
 
