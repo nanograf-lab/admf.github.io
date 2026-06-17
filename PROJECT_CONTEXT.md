@@ -79,6 +79,18 @@ Do not suggest adding pages, features, or complexity. The project is intentional
 
 ---
 
+## Delivery Model
+
+ADMF is not a traditional agency and should not be treated as a solo freelance practice.
+
+The model is a senior design partnership with direct senior involvement. Depending on the project, additional trusted senior collaborators may participate behind the scenes.
+
+The public positioning emphasizes quality, seniority and direct access rather than agency structures, team size or headcount.
+
+Clients work directly with senior practitioners while ADMF retains the flexibility to assemble the right expertise when appropriate.
+
+---
+
 ## Core Value Proposition
 
 ADMF combines:
@@ -204,7 +216,7 @@ These are separate. Do not conflate them in any communication or document.
 
 **Domain:** admf.work
 **Platform:** GitHub Pages (static HTML)
-**Repo:** github.com/nanograf-lab/admf.github.io.git
+**Repo:** github.com/nanograf-lab/admf.git
 **Branch:** main
 **Local path:** /Users/andreasmaier/Documents/ADMF/ADMF Site/
 
@@ -285,3 +297,15 @@ Relationship-first. Not cold pitching.
 ## Contact
 
 hello.admf@gmail.com
+
+---
+
+## Delivery Model
+
+ADMF is not a traditional agency and should not be treated as a solo freelance practice.
+
+The model is a senior design partnership with direct senior involvement. Depending on the project, additional trusted senior collaborators may participate behind the scenes.
+
+The public positioning emphasizes quality, seniority and direct access rather than agency structures, team size or headcount.
+
+Clients work directly with senior practitioners while ADMF retains the flexibility to assemble the right expertise when appropriate.
